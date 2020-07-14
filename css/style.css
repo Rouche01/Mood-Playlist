@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #467AAB;
+    --secondary-color: #FB527B;
+    --section-heading: 30px;
+    --body-text: 24px;
+}
+
+#hero-section {
+    position: relative;
+    color: var(--primary-color);
+}
+
+.cta-col {
+    position: absolute;
+    top: 170px;
+}
+
+#hero-section .background-image {
+    background-image: url(../images/background-img.svg);
+    height: 800px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: right 0 top 0;
+}
+
+#hero-section h1 {
+    font-size: 60px;
+}
+
+#hero-section h1 span {
+    color: var(--secondary-color);
+}
+
+#hero-section h3 {
+    font-size: 40px;
+}
+
+#hero-section p {
+    font-size: 20px;
+}
+
+#hero-section input {
+    font-size: 16px;
+    padding: 20px 24px;
+}
+
+.mood-btn {
+    background-color: var(--secondary-color);
+    width: 50%;
+    font-size: 16px;
+    padding: 20px 45px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+.check-in-screen {
+    position: absolute;
+    top: 120px;
+    right: 100px;
+    width: 24%;
+}
+
+.player-skin {
+    position: absolute;
+    top: 400px;
+    right: 330px;
+    width: 24%;
+}
+
+/* input {
+    display: block;
+    margin: auto;
+    width: 280px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 14px 22px;
+    text-align: center;
+}
+
+.email:focus {
+    outline-color: mediumvioletred;
+}
+
+input[type=submit] {
+    background-color: mediumvioletred;
+    color: #fff;
+    cursor: pointer;
+}
+#empty-error {
+    color: red;
+    margin-bottom: 12px;
+    font-size: 16px;
+    display: none;
+} */
+
+#loading {
+    display: none;
+    justify-content: center;
+}
+
+#loading div {
+    width: 1rem;
+    height: 1rem;
+    margin: 2rem 0.3rem;
+    background-color: mediumvioletred;
+    border-radius: 50%;
+    animation: 0.9s bounce infinite alternate;
+}
+
+#loading div:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+#loading div:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    to {
+        opacity: 0.3;
+        transform: translate3d(0, -1rem, 0);
+    }
+}
