@@ -10,9 +10,13 @@
 
     $sql = "INSERT INTO subscribers (email) VALUES ('$subscriber_email')";
     if($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "<p class='success-msg'>You have been successfully added to our <span class='color-variant'>special waitlist</span>. Look out for updates</p>";
     } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
+        if($conn->errno === 1062) {
+            echo "duplicate-err";
+        } else {
+            echo "other-err";
+        }
     }
     
     $conn->close();

@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 :root {
@@ -21,7 +22,7 @@ body {
 
 .cta-col {
     position: absolute;
-    top: 170px;
+    top: 150px;
 }
 
 #hero-section .background-image {
@@ -36,7 +37,7 @@ body {
     font-size: 60px;
 }
 
-#hero-section h1 span {
+.color-variant {
     color: var(--secondary-color);
 }
 
@@ -44,13 +45,34 @@ body {
     font-size: 40px;
 }
 
-#hero-section p {
+#hero-section h4 {
     font-size: 20px;
 }
 
-#hero-section input {
+#hero-section p, .success-msg {
+    font-size: 20px;
+    color: #8FABC6;
+}
+
+#hero-section #err-duplicate, #hero-section #err-others {
+    font-size: 16px;
+    color: var(--secondary-color);
+    display: none;
+}
+
+#hero-section input, #work-04 input {
     font-size: 16px;
     padding: 20px 24px;
+    border: 0.5px solid rgba(251, 82, 123, 0.6);
+}
+
+#hero-section input[type=email], #work-04 input[type=email] {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#hero-section input:focus, #work-04 input:focus {
+    box-shadow: none;
 }
 
 .mood-btn {
@@ -68,6 +90,7 @@ body {
     top: 120px;
     right: 100px;
     width: 24%;
+    animation: float 4s ease-in-out infinite;
 }
 
 .player-skin {
@@ -75,27 +98,114 @@ body {
     top: 400px;
     right: 330px;
     width: 24%;
+    animation: float 4s ease-in-out infinite;
 }
 
-/* input {
-    display: block;
-    margin: auto;
-    width: 280px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    padding: 14px 22px;
-    text-align: center;
+#work-01 {
+    margin-top: 27%;
 }
 
-.email:focus {
-    outline-color: mediumvioletred;
+#work-01 h2 {
+    font-size: 45px;
+    color: var(--primary-color);
+    margin-bottom: 140px;
 }
 
-input[type=submit] {
-    background-color: mediumvioletred;
-    color: #fff;
-    cursor: pointer;
+h3.how-it-works {
+    font-size: var(--section-heading);
+    font-weight: 600;
+    color: var(--primary-color);
 }
+
+p.how-it-works {
+    font-size: var(--body-text);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.check-in-2, .playlist-scr {
+    width: 72%;
+}
+
+#work-02 {
+    margin-top: -350px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+#work-02 .background-image {
+    background-image: url(../images/background-2.svg);
+    height: 1050px;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: left 0 top -100px;
+}
+
+#work-02 h3 {
+    margin-top: -300px;
+}
+
+.mood-notif-01 {
+    position: absolute;
+    left: 120px;
+    top: 530px;
+    width: 23%;
+}
+
+.mood-notif-02 {
+    position: absolute;
+    left: 280px;
+    top: 800px;
+    width: 25%;
+    z-index: 10;
+}
+
+#work-03 {
+    margin-top: 450px;
+    position: relative;
+}
+
+#work-03 .background-image {
+    background-image: url(../images/background-3.svg);
+    height: 1200px;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: right 0 top -90px;
+}
+
+#work-03 .row {
+    position: absolute;
+    top: 100px;
+}
+
+#work-04 {
+    margin-top: -100px;
+}
+
+.onboard-screen {
+    width: 72%;
+}
+
+#work-04 form {
+    margin-top: 130px;
+}
+
+#work-04 {
+    background-image: url(../images/world-map.png);
+    height: inherit;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: right 20% top -20%;
+}
+
+footer {
+    background-color: var(--primary-color);
+    margin-top: 130px;
+}
+
+.copyright-txt {
+    font-size: 20px;
+}
+/* 
 #empty-error {
     color: red;
     margin-bottom: 12px;
@@ -104,8 +214,9 @@ input[type=submit] {
 } */
 
 #loading {
-    display: none;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
 }
 
 #loading div {
@@ -130,4 +241,16 @@ input[type=submit] {
         opacity: 0.3;
         transform: translate3d(0, -1rem, 0);
     }
+}
+
+@keyframes float {
+    0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
