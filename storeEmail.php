@@ -19,7 +19,7 @@
         if($conn->errno === 1062) {
             echo "duplicate-err";
         } else {
-            echo $conn->connect_error;
+            echo $conn->error;
         }
     }
     
