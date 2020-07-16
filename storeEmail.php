@@ -1,6 +1,10 @@
 <?php
+    $hostname = "us-cdbr-east-02.cleardb.com";
+    $username = "b6c1bc3da7071e";
+    $database = "heroku_cfce7cd27f0af17";
+    $password = "3660ab13";
 
-    $conn = new mysqli('localhost', 'root', '', 'mood_playlist');
+    $conn = new mysqli($hostname, $username, $password, $database);
 
     if($conn->connect_error) {
         die('Connection failed : ' . $conn->connect_error);
